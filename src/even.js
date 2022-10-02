@@ -7,8 +7,8 @@ const secondGame = () => {
     console.log('Anser "yes" if number is even, otherwise "no".');
     let numberForQuestion = 0;
     for (let i = 1; i <= 3; i +=1) {
-        let x = Math.random();
-        numberForQuestion = Math.trunc([x * 100]);
+        let xTmpVar = Math.random();
+        numberForQuestion = Math.trunc([xTmpVar * 100]);
         console.log(`Question: ${numberForQuestion}`);
         let result = numberForQuestion % 2 ? 'no' : 'yes';
         let userAnswer = readlineSync.question('Your anser: ');
