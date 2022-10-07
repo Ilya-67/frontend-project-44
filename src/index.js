@@ -48,3 +48,14 @@ export function getComputerAnswer(userAnswer, result, userName) {
     }
     return computerAnswer;   
 }
+
+export function getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression) {
+    let arrToQuestion = [];
+    for (let i = 0; i < qtyInProgession; i += 1) {
+        arrToQuestion.push((i + 1) * stepProgression);                   
+    }
+    let result = arrToQuestion[itemOfNumber];
+    arrToQuestion[itemOfNumber] = '...';
+    console.log(`Question: ${arrToQuestion}`);
+    return result;
+}
