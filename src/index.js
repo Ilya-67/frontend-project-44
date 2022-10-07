@@ -28,6 +28,23 @@ export function getRandomMathOpertion(a, b, i) {
 
 export function getResultMathOperatin(a, b, i) {
     let arrOperation = [(a + b), (a - b), (a * b), (a / b), (a ** b)];
-    const result = arrOperation[i];
+    let result = arrOperation[i];
+    result = Math.round(result * 100) / 100;
     return result;
+}
+
+export function getUserAnswer() {
+    let userAnswer = readlineSync.question('Your answer: ');
+    return userAnswer;
+}
+
+export function getComputerAnswer(userAnswer, result, userName) {
+    let computerAnswer;
+    if (userAnswer == result) {
+        computerAnswer = 'Correct!';
+    } else {
+        computerAnswer = `"${userAnswer}" is wrong answer ;(. Correct answer  was "${result}". 
+        Let\'s try again, ${userName}!`;
+    }
+    return computerAnswer;   
 }

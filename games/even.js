@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getGreetings } from '../src/index.js'
+import { getGreetings, getComputerAnswer, getUserAnswer } from '../src/index.js'
 
 const secondGame = () => {
     const userName = getGreetings();
@@ -8,14 +8,12 @@ const secondGame = () => {
         const numberForQuestion = Math.trunc([Math.random() * 100]);
         console.log(`Question: ${numberForQuestion}`);
         let result = numberForQuestion % 2 ? 'no' : 'yes';
-        let userAnswer = readlineSync.question('Your anser: ');
-        if (userAnswer === result) {
-            console.log('Correct!');
-        } if (userAnswer !== result) {
-            console.log(`"${userAnswer}" is wrong answer ;(. Correct answer  was "${result}". 
-            Let\'s try again, ${userName}!`);
+        let userAnswer = getUserAnswer();
+        let computerAnswer = getComputerAnswer(userAnswer, result, userName);
+        console.log(computerAnswer);
+        if (computerAnswer !== 'Correct!') {
             break;
-        }  
+        } 
         if (i === 3) {
             console.log(`Congratulation, ${userName}!`);
         }
