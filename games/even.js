@@ -3,7 +3,7 @@ import { getGreetings, getComputerAnswer, getUserAnswer } from '../src/index.js'
 
 const secondGame = () => {
     const userName = getGreetings();
-    console.log('Answer "yes" if number is even, otherwise answer "no".');
+    console.log('Answer "yes" if the number is even, otherwise answer "no".');
     for (let i = 1; i <= 3; i +=1) {
         const numberForQuestion = Math.trunc([Math.random() * 100]);
         console.log(`Question: ${numberForQuestion}`);
