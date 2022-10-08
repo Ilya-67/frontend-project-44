@@ -12,7 +12,7 @@ const sixthGame = () => {
     console.log(computerAnswer);
     if (computerAnswer !== 'Correct!') {
       break;
-    } 
+    }
     if (i === 3) {
       console.log(`Congratulations, ${userName}!`);
     }

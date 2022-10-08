@@ -12,7 +12,7 @@ const forthGame = () => {
     let result = 0;
     while (y > 0) {
       const z = x % y;
-      if (z === 0) { 
+      if (z === 0) {
         result = y;
         break;
       } else {
