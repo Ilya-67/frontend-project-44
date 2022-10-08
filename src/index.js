@@ -55,7 +55,7 @@ export function getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression)
   }
   const result = arrToQuestion[itemOfNumber];
   arrToQuestion[itemOfNumber] = '..';
-  const str = arrToQuestion.join(" ");
+  const str = arrToQuestion.join(' ');
   console.log(`Question: ${str}`);
   return result;
 }
