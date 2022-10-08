@@ -2,7 +2,7 @@ import { getGreetings, getComputerAnswer, getUserAnswer, getNumberIsPrime } from
 
 const sixthGame = () => {
     const userName = getGreetings();
-    console.log('Anser "yes" if given number is prime. Otherwise answer "no".');
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     for (let i = 1; i <= 3; i +=1) {
         const numberForQuestion = Math.trunc([Math.random() * 100]);
         console.log(`Question: ${numberForQuestion}`);
