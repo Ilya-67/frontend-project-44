@@ -1,4 +1,4 @@
-import { getGreetings } from '../src/index.js'
+import {getGreetings} from '../src/index.js';
 
 const firstGame = () => getGreetings();
 
