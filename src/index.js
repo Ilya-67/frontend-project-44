@@ -54,7 +54,7 @@ export function getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression)
         arrToQuestion.push((i + 1) * stepProgression);                   
     }
     let result = arrToQuestion[itemOfNumber];
-    arrToQuestion[itemOfNumber] = '...';
+    arrToQuestion[itemOfNumber] = '..';
     console.log(`Question: ${arrToQuestion}`);
     return result;
 }
