@@ -12,7 +12,7 @@ export function getNumberForExpression() {
 }
 
 export function getRandonInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 export function getNumberOperation() {
@@ -28,7 +28,7 @@ export function getRandomMathOpertion(a, b, i) {
 
 export function getResultMathOperatin(a, b, i) {
   const arrOperation = [(a + b), (a - b), (a * b)];
-	const result = arrOperation[i];
+  const result = arrOperation[i];
   return result;
 }
 
@@ -45,13 +45,13 @@ export function getComputerAnswer(userAnswer, result, userName) {
     computerAnswer = `"${userAnswer}" is wrong answer ;(. Correct answer  was "${result}". 
     Let's try again, ${userName}!`;
   }
-  return computerAnswer;   
+  return computerAnswer;  
 }
 
 export function getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression) {
-  let arrToQuestion = [];
+  const arrToQuestion = [];
   for (let i = 0; i < qtyInProgession; i += 1) {
-    arrToQuestion.push((i + 1) * stepProgression);                   
+    arrToQuestion.push((i + 1) * stepProgression);
   }
   const result = arrToQuestion[itemOfNumber];
   arrToQuestion[itemOfNumber] = '..';
@@ -61,7 +61,7 @@ export function getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression)
 }
 
 export function getNumberIsPrime(numberForQuestion) {
-  const arrPrimeNumber = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+  const arrPrimeNumber = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97];
   const result = arrPrimeNumber.includes(numberForQuestion) ? 'yes' : 'no';
-  return result; 
+  return result;
 }

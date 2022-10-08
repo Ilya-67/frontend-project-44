@@ -1,15 +1,15 @@
-import {getComputerAnswer, getGreetings, getArrToQuestion, getUserAnswer, getRandonInteger} from '../src/index.js';
+import { getComputerAnswer, getGreetings, getArrToQuestion, getUserAnswer, getRandonInteger } from '../src/index.js';
 
 const fifthGame = () => {
   const userName = getGreetings();
   console.log('What number is missing in the progression?');
   for (let i = 1; i <= 3; i += 1) {
-    let qtyInProgession = getRandonInteger(5, 10);
-    let itemOfNumber = getRandonInteger(0, (qtyInProgession - 1));
-    let stepProgression = getRandonInteger(2, 10);
-    let result = getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression);
-    let userAnswer = getUserAnswer();
-    let computerAnswer = getComputerAnswer(userAnswer, result, userName);
+    const qtyInProgession = getRandonInteger(5, 10);
+    const itemOfNumber = getRandonInteger(0, (qtyInProgession - 1));
+    const stepProgression = getRandonInteger(2, 10);
+    const result = getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression);
+    const userAnswer = getUserAnswer();
+    const computerAnswer = getComputerAnswer(userAnswer, result, userName);
     console.log(computerAnswer);
     if (computerAnswer !== 'Correct!') {
       break;
