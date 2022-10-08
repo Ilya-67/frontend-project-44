@@ -16,20 +16,19 @@ export function getRandonInteger(min, max) {
     }
 
 export function getNumberOperation() {
-    const numberOperation = getRandonInteger(0, 4);
+    const numberOperation = getRandonInteger(0, 2);
     return numberOperation;
 }
 
 export function getRandomMathOpertion(a, b, i) {
-    let arrOperation1 = ['+', '-', '*', '/', '**'];
+    let arrOperation1 = ['+', '-', '*'];
     const question = arrOperation1[i];
     return question;
 }
 
 export function getResultMathOperatin(a, b, i) {
-    let arrOperation = [(a + b), (a - b), (a * b), (a / b), (a ** b)];
+    let arrOperation = [(a + b), (a - b), (a * b)];
     let result = arrOperation[i];
-    result = Math.round(result * 100) / 100;
     return result;
 }
 
