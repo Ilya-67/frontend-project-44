@@ -14,7 +14,7 @@ const sixthGame = () => {
             break;
         } 
         if (i === 3) {
-            console.log(`Congratulation, ${userName}!`);
+            console.log(`Congratulations, ${userName}!`);
         }
     }
 }
