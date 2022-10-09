@@ -1,4 +1,4 @@
-import { getComputerAnswer, getGreetings, getArrToQuestion, getUserAnswer, getRandonInteger } from '../src/index.js';
+import {  getComputerAnswer, getGreetings, getArrToQuestion, getUserAnswer, getRandonInteger  } from '../src/index.js';
 
 export default function fifthGame() {
   const userName = getGreetings();
@@ -18,4 +18,4 @@ export default function fifthGame() {
       console.log(`Congratulations, ${userName}!`);
     }
   }
-};
+}

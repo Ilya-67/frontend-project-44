@@ -1,4 +1,4 @@
-import { getGreetings, getComputerAnswer, getUserAnswer, getNumberIsPrime } from '../src/index.js';
+import {  getGreetings, getComputerAnswer, getUserAnswer, getNumberIsPrime  } from '../src/index.js';
 
 export default function sixthGame() {
   const userName = getGreetings();
@@ -17,4 +17,4 @@ export default function sixthGame() {
       console.log(`Congratulations, ${userName}!`);
     }
   }
-};
+}

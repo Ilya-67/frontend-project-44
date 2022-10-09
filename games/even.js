@@ -17,4 +17,4 @@ export default function secondGame() {
       console.log(`Congratulations, ${userName}!`);
     }
   }
-};
+}

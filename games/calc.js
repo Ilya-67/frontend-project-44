@@ -1,4 +1,4 @@
-import { getGreetings, getRandonInteger, getRandomMathOpertion, getNumberOperation, getResultMathOperatin, getUserAnswer, getComputerAnswer } from '../src/index.js';
+import {  getGreetings, getRandonInteger, getRandomMathOpertion, getNumberOperation, getResultMathOperatin, getUserAnswer, getComputerAnswer  } from '../src/index.js';
 
 export default function thirdGame() {
   const userName = getGreetings();
@@ -20,4 +20,4 @@ export default function thirdGame() {
       console.log(`Congratulations, ${userName}!`);
     }
   }
-};
+}
