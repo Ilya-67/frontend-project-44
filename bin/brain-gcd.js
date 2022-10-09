@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import forthGame from '../games/gcd.js';
+import { forthGame } from '../games/gcd.js';
 
-forthGame;
+forthGame();

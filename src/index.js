@@ -39,7 +39,7 @@ export function getUserAnswer() {
 
 export function getComputerAnswer(userAnswer, result, userName) {
   let computerAnswer;
-  if (userAnswer == result) {
+  if (userAnswer === result) {
     computerAnswer = 'Correct!';
   } else {
     computerAnswer = `"${userAnswer}" is wrong answer ;(. Correct answer  was "${result}". 
@@ -60,8 +60,18 @@ export function getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression)
   return result;
 }
 
-export function getNumberIsPrime(numberForQuestion) {
-  const arrPrimeNumber = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
-  const result = arrPrimeNumber.includes(numberForQuestion) ? 'yes' : 'no';
-  return result;
-}
+export function getNumberIsPrime (numberForQuestion) {
+  let i = 2;
+  while (i <= numberForQuestion) {
+    let result;
+    const a = numberForQuestion % i;
+    if (a === 0 && i < numberForQuestion) {
+      result = 'no';
+      return result;
+    } if (i === numberForQuestion) {
+      result = 'yes';
+      return result;
+    }
+    i += 1;
+  }
+};

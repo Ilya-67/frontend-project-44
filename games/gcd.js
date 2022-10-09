@@ -1,6 +1,6 @@
 import { getComputerAnswer, getGreetings, getRandonInteger, getUserAnswer } from '../src/index.js';
 
-const forthGame = () => {
+export const forthGame = () => {
   const userName = getGreetings();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 1; i <= 3; i += 1) {
@@ -20,7 +20,7 @@ const forthGame = () => {
         y = z;
       }
     }
-    const userAnswer = getUserAnswer();
+    const userAnswer = +getUserAnswer();
     const computerAnswer = getComputerAnswer(userAnswer, result, userName);
     console.log(computerAnswer);
     if (computerAnswer !== 'Correct!') {
@@ -31,5 +31,3 @@ const forthGame = () => {
     }
   }
 };
-
-export default forthGame();
