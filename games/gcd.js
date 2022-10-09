@@ -1,4 +1,6 @@
-import {  getComputerAnswer, getGreetings, getRandonInteger, getUserAnswer  } from '../src/index.js';
+import {
+  getComputerAnswer, getGreetings, getRandonInteger, getUserAnswer
+} from '../src/index.js';
 
 export default function forthGame() {
   const userName = getGreetings();
