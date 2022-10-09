@@ -1,6 +1,6 @@
 import { getComputerAnswer, getGreetings, getArrToQuestion, getUserAnswer, getRandonInteger } from '../src/index.js';
 
-export const fifthGame = () => {
+export default function fifthGame() {
   const userName = getGreetings();
   console.log('What number is missing in the progression?');
   for (let i = 1; i <= 3; i += 1) {

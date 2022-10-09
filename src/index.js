@@ -60,18 +60,16 @@ export function getArrToQuestion(qtyInProgession, itemOfNumber, stepProgression)
   return result;
 }
 
-export function getNumberIsPrime (numberForQuestion) {
-  let i = 2;
-  while (i <= numberForQuestion) {
-    let result;
+export function getNumberIsPrime(numberForQuestion) {
+  let result;
+  for (let i = 2; i <= numberForQuestion; i += 1) {
     const a = numberForQuestion % i;
     if (a === 0 && i < numberForQuestion) {
       result = 'no';
-      return result;
-    } if (i === numberForQuestion) {
+      break;
+    } if (a === 0 && i === numberForQuestion) {
       result = 'yes';
-      return result;
     }
-    i += 1;
   }
-};
+  return result;
+}

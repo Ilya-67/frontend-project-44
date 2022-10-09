@@ -1,6 +1,6 @@
 import { getGreetings, getRandonInteger, getRandomMathOpertion, getNumberOperation, getResultMathOperatin, getUserAnswer, getComputerAnswer } from '../src/index.js';
 
-export const thirdGame = () => {
+export default function thirdGame() {
   const userName = getGreetings();
   console.log('What is the result of the expression?');
   for (let i = 1; i <= 3; i += 1) {

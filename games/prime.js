@@ -1,6 +1,6 @@
 import { getGreetings, getComputerAnswer, getUserAnswer, getNumberIsPrime } from '../src/index.js';
 
-export const sixthGame = () => {
+export default function sixthGame() {
   const userName = getGreetings();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 1; i <= 3; i += 1) {

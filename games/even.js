@@ -1,6 +1,6 @@
 import { getGreetings, getComputerAnswer, getUserAnswer } from '../src/index.js';
 
-export const secondGame = () => {
+export default function secondGame() {
   const userName = getGreetings();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 1; i <= 3; i += 1) {
