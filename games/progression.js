@@ -1,5 +1,5 @@
 import {
-  getComputerAnswer, getGreetings, getArrToQuestion, getUserAnswer, getRandonInteger
+  getComputerAnswer, getGreetings, getArrToQuestion, getUserAnswer, getRandonInteger,
 } from '../src/index.js';
 
 export default function fifthGame() {

@@ -1,5 +1,5 @@
 import {
-  getComputerAnswer, getGreetings, getRandonInteger, getUserAnswer
+  getComputerAnswer, getGreetings, getRandonInteger, getUserAnswer,
 } from '../src/index.js';
 
 export default function forthGame() {

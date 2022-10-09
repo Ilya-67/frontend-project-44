@@ -1,6 +1,6 @@
 import {
   getGreetings, getRandonInteger, getRandomMathOpertion, getNumberOperation,
-  getResultMathOperatin, getUserAnswer, getComputerAnswer
+  getResultMathOperatin, getUserAnswer, getComputerAnswer,
 } from '../src/index.js';
 
 export default function thirdGame() {
