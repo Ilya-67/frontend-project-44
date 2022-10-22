@@ -1,4 +1,5 @@
 ### Hexlet tests and linter status:
+<a href="https://github.com/Ilya-67/frontend-project-44/workflows/hexlet-check/badge.svg"><img src="https://github.com/Ilya-67/frontend-project-44/workflows/hexlet-check/badge.svg" /></a>
 <a href="https://codeclimate.com/github/Ilya-67/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/f2e708b6a1a110b3d43b/maintainability" /></a>
 
 <h2>Project "Brain games" contain 5 games:</h2>

@@ -19,7 +19,7 @@ export default function getProgressionGame() {
     const hiddenNumber = arrToQuestion[itemOfHiddenNumber];
     arrToQuestion[itemOfHiddenNumber] = '..';
     const stringOfArrToQuestion = arrToQuestion.join(' ');
-    arrResult.push(`${hiddenNumber}`); 
+    arrResult.push(`${hiddenNumber}`);
     arrGameComputerQuestion.push(`Question: ${stringOfArrToQuestion}`);
   }
   const message = getComputerAnswer(gameQuestion, arrGameComputerQuestion, arrResult);
