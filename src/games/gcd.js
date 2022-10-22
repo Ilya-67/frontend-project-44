@@ -8,7 +8,7 @@ export default function getGreatestCommonDivisorGame() {
   const gameQuestion = 'Find the greatest common divisor of given numbers.';
   const arrGameComputerQuestion = [];
   const arrResult = [];
-  for (let i = 1; i < 4; i++) {
+  for (let i = 1; i < 4; i += 1) {
     const number1 = getRandonInteger(1, 1000);
     const number2 = getRandonInteger(1, 1000);
     let maxNumber = (number1 > number2) ? number1 : number2;
@@ -24,7 +24,7 @@ export default function getGreatestCommonDivisorGame() {
         minNumber = divisiorRemainder;
       }
     }
-    arrResult.push(`${result}`); 
+    arrResult.push(`${result}`);
     arrGameComputerQuestion.push(`Question: ${number1} ${number2}`);
   }
   const message = getComputerAnswer(gameQuestion, arrGameComputerQuestion, arrResult);

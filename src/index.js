@@ -8,7 +8,7 @@ export default function getComputerAnswer(gameQuestion, arrGameComputerQuestion,
   let message;
   for (let i = 0; i < 3; i += 1) {
     console.log(arrGameComputerQuestion[i]);
-    const userAnswer = readlineSync.question('Your answer: ');;
+    const userAnswer = readlineSync.question('Your answer: ');
     if (arrResult[i] !== userAnswer) {
       message = `"${userAnswer}" is wrong answer ;(. Correct answer  was "${arrResult[i]}". 
 Let's try again, ${userName}!`;

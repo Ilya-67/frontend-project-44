@@ -14,7 +14,7 @@ export default function getCalculatorGame() {
     const j = getRandonInteger(0, 2);
     const arrSignOfOperation = ['+', '-', '*'];
     const arrMathOperation = [(number1 + number2), (number1 - number2), (number1 * number2)];
-    arrResult.push(`${arrMathOperation[j]}`); 
+    arrResult.push(`${arrMathOperation[j]}`);
     arrGameComputerQuestion.push(`Question: ${number1} ${arrSignOfOperation[j]} ${number2}`);
   }
   const message = getComputerAnswer(gameQuestion, arrGameComputerQuestion, arrResult);

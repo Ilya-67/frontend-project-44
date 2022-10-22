@@ -8,14 +8,14 @@ export default function getProgressionGame() {
   const gameQuestion = 'What number is missing in the progression?';
   const arrGameComputerQuestion = [];
   const arrResult = [];
-  for (let i = 1; i < 4; i++) {
+  for (let i = 1; i < 4; i += 1) {
     const qtyInProgession = getRandonInteger(5, 10);
     const itemOfHiddenNumber = getRandonInteger(0, (qtyInProgession - 1));
-    const stepProgression = getRandonInteger(2, 10);  
+    const stepProgression = getRandonInteger(2, 10);
     const arrToQuestion = [];
-    for (let i = 0; i < qtyInProgession; i += 1) {
-      arrToQuestion.push((i + 1) * stepProgression);
-    }  
+    for (let j = 0; j < qtyInProgession; j += 1) {
+      arrToQuestion.push((j + 1) * stepProgression);
+    }
     const hiddenNumber = arrToQuestion[itemOfHiddenNumber];
     arrToQuestion[itemOfHiddenNumber] = '..';
     const stringOfArrToQuestion = arrToQuestion.join(' ');

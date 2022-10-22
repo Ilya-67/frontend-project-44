@@ -24,6 +24,7 @@
         <h3>Brain-progression</h3>
         <p>In the game "Brain-progression" in response to the program's question, write the missing number in the progression.The algorithm of the program is similar to that described in the first game.</p>
     </li>
+    <h3>Games demonstreation.</h3>
 <a href="https://asciinema.org/a/Cae4PJPDQ29sM51HbmaO8VnsD" target="_blank"><img src="https://asciinema.org/a/Cae4PJPDQ29sM51HbmaO8VnsD.svg" /></a>
 <h3>Brain even</h3>
 <a href="https://asciinema.org/a/SqkJhYk7RBM2DtFWRhwxK5Hzn" target="_blank"><img src="https://asciinema.org/a/SqkJhYk7RBM2DtFWRhwxK5Hzn.svg" /></a>
@@ -35,4 +36,4 @@
 <a href="https://asciinema.org/a/wj13NslYxh9t2UWH6Z341fk4V" target="_blank"><img src="https://asciinema.org/a/wj13NslYxh9t2UWH6Z341fk4V.svg" /></a>
 <h3>Brain prime</h3>
 <a href="https://asciinema.org/a/AjBXKpRqia7bK2LovqkEVJvSR" target="_blank"><img src="https://asciinema.org/a/AjBXKpRqia7bK2LovqkEVJvSR.svg" /></a>
-<h3>Example of installing the game Brain-gcg.</h3>
+<h3>Example of installing the game Brain-gcd.</h3>
