@@ -5,7 +5,7 @@ function getRandonInteger(min, max) {
 }
 
 export default function getGreatestCommonDivisorGame() {
-  const gameQuestion = 'What is the result of the expression?';
+  const gameQuestion = 'Find the greatest common divisor of given numbers.';
   const arrGameComputerQuestion = [];
   const arrResult = [];
   for (let i = 1; i < 4; i++) {
