@@ -7,12 +7,12 @@ export default function isNumberPrimeGame() {
   for (let i = 1; i < 4; i += 1) {
     const numberForQuestion = Math.trunc([Math.random() * 100]) + 1;
     let result;
-    for (let i = 2; i <= numberForQuestion; i += 1) {
-      const a = numberForQuestion % i;
-      if (a === 0 && i < numberForQuestion) {
+    for (let j = 2; j <= numberForQuestion; j += 1) {
+      const a = numberForQuestion % j;
+      if (a === 0 && j < numberForQuestion) {
         result = 'no';
         break;
-      } if (a === 0 && i === numberForQuestion) {
+      } if (a === 0 && j === numberForQuestion) {
         result = 'yes';
       }
     }
