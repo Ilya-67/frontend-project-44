@@ -1,7 +1,7 @@
 import playRound from '../index.js';
 import getRandonInteger from '../utils.js';
 
-export default function getGreatestCommonDivisorGame() {
+export default function getGCD() {
   const gameTask = 'Find the greatest common divisor of given numbers.';
   const qtyStep = 3;
   const gameQuestions = [];

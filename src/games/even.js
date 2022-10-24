@@ -1,6 +1,6 @@
 import playRound from '../index.js';
 
-export default function isNumberEvenGame() {
+export default function isNumberEven() {
   const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
   const qtyStep = 3;
   const gameQuestions = [];

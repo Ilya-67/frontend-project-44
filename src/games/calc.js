@@ -1,7 +1,7 @@
 import playRound from '../index.js';
 import getRandonInteger from '../utils.js';
 
-export default function getCalculatorGame() {
+export default function getCalc() {
   const gameTask = 'What is the result of the expression?';
   const qtyStep = 3;
   const gameQuestions = [];

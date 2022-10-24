@@ -1,6 +1,6 @@
 import playRound from '../index.js';
 
-export default function isNumberPrimeGame() {
+export default function isNumberPrime() {
   const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const qtyStep = 3;
   const gameQuestions = [];
