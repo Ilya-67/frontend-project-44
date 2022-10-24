@@ -1,12 +1,11 @@
-import playRound from '../index.js';
+import playGame from '../index.js';
 import getRandonInteger from '../utils.js';
 
-export default function getProgression() {
+export default function getProgression(qtyRound) {
   const gameTask = 'What number is missing in the progression?';
-  const qtyStep = 3;
   const gameQuestions = [];
   const results = [];
-  for (let i = 1; i <= qtyStep; i += 1) {
+  for (let i = 1; i <= qtyRound; i += 1) {
     const qtyInProgession = getRandonInteger(5, 10);
     const itemOfHiddenNumber = getRandonInteger(0, (qtyInProgession - 1));
     const stepProgression = getRandonInteger(2, 10);
@@ -20,5 +19,5 @@ export default function getProgression() {
     results.push(`${hiddenNumber}`);
     gameQuestions.push(`Question: ${stringOfQuestion}`);
   }
-  playRound(gameTask, gameQuestions, results);
+  playGame(gameTask, gameQuestions, results);
 }

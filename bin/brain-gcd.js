@@ -1,4 +1,5 @@
 #!/usr/bin/env node
 import getGCD from '../src/games/gcd.js';
 
-getGCD();
+const qtyRound = 3;
+getGCD(qtyRound);
