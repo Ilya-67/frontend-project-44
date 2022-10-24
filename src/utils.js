@@ -35,10 +35,12 @@ export function getResultExpession(number1, number2, choiceOperation) {
     default:
       console.log('add new case');
   }
-  return {result, question};
+  return { result, question };
 }
 
-export function getNumberGCD(minNumber, maxNumber) {
+export function getNumberGCD(min, max) {
+  let minNumber = min;
+  let maxNumber = max;
   let result;
   while (minNumber > 0) {
     const divisiorRemainder = maxNumber % minNumber;
@@ -48,7 +50,7 @@ export function getNumberGCD(minNumber, maxNumber) {
     } else {
       maxNumber = minNumber;
       minNumber = divisiorRemainder;
-    }  
+    }
   }
   return result;
 }

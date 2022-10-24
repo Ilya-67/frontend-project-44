@@ -7,7 +7,7 @@ export default function getPrimeGame(qtyRound) {
   const results = [];
   for (let i = 1; i <= qtyRound; i += 1) {
     const numberForQuestion = Math.trunc([Math.random() * 100]) + 2;
-    let result = isNumberPrime(numberForQuestion);
+    const result = isNumberPrime(numberForQuestion);
     results.push(result);
     gameQuestions.push(`Question: ${numberForQuestion}`);
   }

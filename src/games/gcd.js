@@ -8,9 +8,9 @@ export default function getGCD(qtyRound) {
   for (let i = 1; i <= qtyRound; i += 1) {
     const number1 = getRandonInteger(1, 1000);
     const number2 = getRandonInteger(1, 1000);
-    let maxNumber = (number1 > number2) ? number1 : number2;
-    let minNumber = (number2 < number1) ? number2 : number1;
-    let result = getNumberGCD(minNumber, maxNumber);
+    const maxNumber = (number1 > number2) ? number1 : number2;
+    const minNumber = (number2 < number1) ? number2 : number1;
+    const result = getNumberGCD(minNumber, maxNumber);
     results.push(`${result}`);
     gameQuestions.push(`Question: ${number1} ${number2}`);
   }
