@@ -6,7 +6,7 @@ export default function isNumberPrime() {
   const gameQuestions = [];
   const results = [];
   for (let i = 1; i <= qtyStep; i += 1) {
-    const numberForQuestion = Math.trunc([Math.random() * 100]) + 1;
+    const numberForQuestion = Math.trunc([Math.random() * 100]) + 2;
     let result;
     for (let j = 2; j <= numberForQuestion; j += 1) {
       const a = numberForQuestion % j;
