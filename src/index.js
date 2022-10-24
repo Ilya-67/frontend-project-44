@@ -1,22 +1,22 @@
 import readlineSync from 'readline-sync';
 
-export default function getComputerAnswer(gameQuestion, arrGameComputerQuestion, arrResult) {
+export default function playRound(gameTask, gameQuestions, results) {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${userName}!`);
-  console.log(gameQuestion);
+  console.log(gameTask);
   let message;
-  for (let i = 0; i < 3; i += 1) {
-    console.log(arrGameComputerQuestion[i]);
+  for (let i = 0; i < results.length; i += 1) {
+    console.log(gameQuestions[i]);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (arrResult[i] !== userAnswer) {
-      message = `"${userAnswer}" is wrong answer ;(. Correct answer  was "${arrResult[i]}". 
+    if (results[i] !== userAnswer) {
+      message = `"${userAnswer}" is wrong answer ;(. Correct answer  was "${results[i]}". 
 Let's try again, ${userName}!`;
       break;
-    } if (arrResult[i] === userAnswer) {
+    } if (results[i] === userAnswer) {
       console.log('Correct!');
     }
     message = `Congratulations, ${userName}!`;
   }
-  return message;
+  console.log(message);
 }

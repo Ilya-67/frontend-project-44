@@ -1,14 +1,12 @@
-import getComputerAnswer from '../index.js';
-
-function getRandonInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+import playRound from '../index.js';
+import { getRandonInteger } from '../utils.js'
 
 export default function getGreatestCommonDivisorGame() {
-  const gameQuestion = 'Find the greatest common divisor of given numbers.';
-  const arrGameComputerQuestion = [];
-  const arrResult = [];
-  for (let i = 1; i < 4; i += 1) {
+  const gameTask = 'Find the greatest common divisor of given numbers.';
+  const qtyStep = 3;
+  const gameQuestions = [];
+  const results = [];
+  for (let i = 1; i <= qtyStep; i += 1) {
     const number1 = getRandonInteger(1, 1000);
     const number2 = getRandonInteger(1, 1000);
     let maxNumber = (number1 > number2) ? number1 : number2;
@@ -24,9 +22,8 @@ export default function getGreatestCommonDivisorGame() {
         minNumber = divisiorRemainder;
       }
     }
-    arrResult.push(`${result}`);
-    arrGameComputerQuestion.push(`Question: ${number1} ${number2}`);
+    results.push(`${result}`);
+    gameQuestions.push(`Question: ${number1} ${number2}`);
   }
-  const message = getComputerAnswer(gameQuestion, arrGameComputerQuestion, arrResult);
-  console.log(message);
+  playRound(gameTask, gameQuestions, results);
 }

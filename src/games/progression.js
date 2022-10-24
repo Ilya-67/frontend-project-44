@@ -1,27 +1,24 @@
-import getComputerAnswer from '../index.js';
-
-function getRandonInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+import playRound from '../index.js';
+import { getRandonInteger } from '../utils.js';
 
 export default function getProgressionGame() {
-  const gameQuestion = 'What number is missing in the progression?';
-  const arrGameComputerQuestion = [];
-  const arrResult = [];
-  for (let i = 1; i < 4; i += 1) {
+  const gameTask = 'What number is missing in the progression?';
+  const qtyStep = 3;
+  const gameQuestions = [];
+  const results = [];
+  for (let i = 1; i <= qtyStep; i += 1) {
     const qtyInProgession = getRandonInteger(5, 10);
     const itemOfHiddenNumber = getRandonInteger(0, (qtyInProgession - 1));
     const stepProgression = getRandonInteger(2, 10);
-    const arrToQuestion = [];
+    const Question = [];
     for (let j = 0; j < qtyInProgession; j += 1) {
-      arrToQuestion.push((j + 1) * stepProgression);
+      Question.push((j + 1) * stepProgression);
     }
-    const hiddenNumber = arrToQuestion[itemOfHiddenNumber];
-    arrToQuestion[itemOfHiddenNumber] = '..';
-    const stringOfArrToQuestion = arrToQuestion.join(' ');
-    arrResult.push(`${hiddenNumber}`);
-    arrGameComputerQuestion.push(`Question: ${stringOfArrToQuestion}`);
+    const hiddenNumber = Question[itemOfHiddenNumber];
+    Question[itemOfHiddenNumber] = '..';
+    const stringOfQuestion = Question.join(' ');
+    results.push(`${hiddenNumber}`);
+    gameQuestions.push(`Question: ${stringOfQuestion}`);
   }
-  const message = getComputerAnswer(gameQuestion, arrGameComputerQuestion, arrResult);
-  console.log(message);
+  playRound(gameTask, gameQuestions, results);
 }

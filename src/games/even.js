@@ -1,15 +1,15 @@
-import getComputerAnswer from '../index.js';
+import playRound from '../index.js';
 
-export default function isNumberEvenGame() {
-  const gameQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const arrGameComputerQuestion = [];
-  const arrResult = [];
-  for (let i = 1; i < 4; i += 1) {
+export default function isNumberEvenGame()  {
+  const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const qtyStep = 3;
+  const gameQuestions = [];
+  const results = [];
+  for (let i = 1; i <= qtyStep; i += 1) {
     const numberForQuestion = Math.trunc([Math.random() * 100]);
     const result = numberForQuestion % 2 ? 'no' : 'yes';
-    arrResult.push(result);
-    arrGameComputerQuestion.push(`Question: ${numberForQuestion}`);
+    results.push(result);
+    gameQuestions.push(`Question: ${numberForQuestion}`);
   }
-  const message = getComputerAnswer(gameQuestion, arrGameComputerQuestion, arrResult);
-  console.log(message);
+  playRound(gameTask, gameQuestions, results);
 }

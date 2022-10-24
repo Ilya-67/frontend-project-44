@@ -1,22 +1,34 @@
-import getComputerAnswer from '../index.js';
-
-function getRandonInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+import playRound from '../index.js';
+import { getRandonInteger } from '../utils.js';
 
 export default function getCalculatorGame() {
-  const gameQuestion = 'What is the result of the expression?';
-  const arrGameComputerQuestion = [];
-  const arrResult = [];
-  for (let i = 1; i < 4; i += 1) {
+  const gameTask = 'What is the result of the expression?';
+  const qtyStep = 3;
+  const gameQuestions = [];
+  const results = [];
+  for (let i = 1; i <= qtyStep; i += 1) {
     const number1 = getRandonInteger(1, 100);
     const number2 = getRandonInteger(1, 100);
-    const j = getRandonInteger(0, 2);
-    const arrSignOfOperation = ['+', '-', '*'];
-    const arrMathOperation = [(number1 + number2), (number1 - number2), (number1 * number2)];
-    arrResult.push(`${arrMathOperation[j]}`);
-    arrGameComputerQuestion.push(`Question: ${number1} ${arrSignOfOperation[j]} ${number2}`);
+    const choiceOption = `${getRandonInteger(0, 2)}`;
+    let question;
+    let result;
+    switch(choiceOption) {
+      case '0':
+        question = `${number1} + ${number2}`;
+        result = number1 + number2;
+        break;
+      case '1':
+        question = `${number1} - ${number2}`;
+        result = number1 - number2;
+        break;
+      case '2':
+        question = `${number1} * ${number2}`;
+        result = number1 * number2;
+        break;
+    }
+    results.push(`${result}`);
+    gameQuestions.push(`Question: ${question}`);
   }
-  const message = getComputerAnswer(gameQuestion, arrGameComputerQuestion, arrResult);
-  console.log(message);
+  playRound(gameTask, gameQuestions, results);
 }
+ 
