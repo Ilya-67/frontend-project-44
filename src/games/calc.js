@@ -1,5 +1,5 @@
 import playRound from '../index.js';
-import { getRandonInteger } from '../utils.js';
+import getRandonInteger from '../utils.js';
 
 export default function getCalculatorGame() {
   const gameTask = 'What is the result of the expression?';
@@ -12,7 +12,7 @@ export default function getCalculatorGame() {
     const choiceOption = `${getRandonInteger(0, 2)}`;
     let question;
     let result;
-    switch(choiceOption) {
+    switch (choiceOption) {
       case '0':
         question = `${number1} + ${number2}`;
         result = number1 + number2;
@@ -25,6 +25,8 @@ export default function getCalculatorGame() {
         question = `${number1} * ${number2}`;
         result = number1 * number2;
         break;
+      default :
+        console.log('add new case');
     }
     results.push(`${result}`);
     gameQuestions.push(`Question: ${question}`);

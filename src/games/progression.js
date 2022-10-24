@@ -1,5 +1,5 @@
 import playRound from '../index.js';
-import { getRandonInteger } from '../utils.js';
+import getRandonInteger from '../utils.js';
 
 export default function getProgressionGame() {
   const gameTask = 'What number is missing in the progression?';
