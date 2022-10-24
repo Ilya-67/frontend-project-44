@@ -25,7 +25,7 @@ export default function getCalculatorGame() {
         question = `${number1} * ${number2}`;
         result = number1 * number2;
         break;
-      default :
+      default:
         console.log('add new case');
     }
     results.push(`${result}`);
@@ -33,4 +33,3 @@ export default function getCalculatorGame() {
   }
   playRound(gameTask, gameQuestions, results);
 }
- 
