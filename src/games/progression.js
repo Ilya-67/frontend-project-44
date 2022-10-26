@@ -2,14 +2,14 @@ import playGame, { getQuantityRound } from '../index.js';
 import getRandonInteger from '../utils.js';
 
 const getProgression = () => {
-  let progression = [];
+  const progression = [];
   const itemInProgession = getRandonInteger(5, 10);
   const stepProgression = getRandonInteger(2, 10);
   for (let j = 0; j < itemInProgession; j += 1) {
     progression.push((j + 1) * stepProgression);
   }
   return progression;
-}
+};
 
 export default function playProgressionGame() {
   const quantityRound = getQuantityRound();

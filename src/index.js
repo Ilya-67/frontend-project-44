@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 export const getQuantityRound = () => {
   const quantityRound = 3;
   return quantityRound;
-}
+};
 
 export default function playGame(gameTask, gameQuestions, correctAnswers) {
   console.log('Welcome to the Brain Games!');

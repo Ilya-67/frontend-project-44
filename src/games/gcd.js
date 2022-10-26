@@ -1,7 +1,9 @@
 import playGame, { getQuantityRound } from '../index.js';
 import getRandonInteger from '../utils.js';
 
-function getNumberGCD(maxNumber, minNumber) {
+function getNumberGCD(max, min) {
+  let maxNumber = max;
+  let minNumber = min;
   let result;
   while (minNumber > 0) {
     const divisiorRemainder = maxNumber % minNumber;
