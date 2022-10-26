@@ -1,15 +1,29 @@
-import playGame from '../index.js';
-import { isNumberPrime } from '../utils.js';
+import playGame, { getQuantityRound } from '../index.js';
 
-export default function getPrimeGame(qtyRound) {
+function isNumberPrime(number) {
+  let result;
+  for (let j = 2; j <= number; j += 1) {
+    const a = number % j;
+    if (a === 0 && j < number) {
+      result = 'no';
+      break;
+    } if (a === 0 && j === number) {
+      result = 'yes';
+    }
+  }
+  return result;
+}
+
+export default function playPrimeGame() {
+  const quantityRound = getQuantityRound();
   const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const gameQuestions = [];
-  const results = [];
-  for (let i = 1; i <= qtyRound; i += 1) {
+  const correctAnswers = [];
+  for (let i = 1; i <= quantityRound; i += 1) {
     const numberForQuestion = Math.trunc([Math.random() * 100]) + 2;
     const result = isNumberPrime(numberForQuestion);
-    results.push(result);
+    correctAnswers.push(result);
     gameQuestions.push(`Question: ${numberForQuestion}`);
   }
-  playGame(gameTask, gameQuestions, results);
+  playGame(gameTask, gameQuestions, correctAnswers);
 }

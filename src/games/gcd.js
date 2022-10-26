@@ -1,18 +1,32 @@
-import playGame from '../index.js';
-import getRandonInteger, { getNumberGCD } from '../utils.js';
+import playGame, { getQuantityRound } from '../index.js';
+import getRandonInteger from '../utils.js';
 
-export default function getGCD(qtyRound) {
+function getNumberGCD(maxNumber, minNumber) {
+  let result;
+  while (minNumber > 0) {
+    const divisiorRemainder = maxNumber % minNumber;
+    if (divisiorRemainder === 0) {
+      result = minNumber;
+      break;
+    } else {
+      maxNumber = minNumber;
+      minNumber = divisiorRemainder;
+    }
+  }
+  return result;
+}
+
+export default function playGcdGame() {
+  const quantityRound = getQuantityRound();
   const gameTask = 'Find the greatest common divisor of given numbers.';
   const gameQuestions = [];
-  const results = [];
-  for (let i = 1; i <= qtyRound; i += 1) {
+  const correctAnswers = [];
+  for (let i = 1; i <= quantityRound; i += 1) {
     const number1 = getRandonInteger(1, 1000);
-    const number2 = getRandonInteger(1, 1000);
-    const maxNumber = (number1 > number2) ? number1 : number2;
-    const minNumber = (number2 < number1) ? number2 : number1;
-    const result = getNumberGCD(minNumber, maxNumber);
-    results.push(`${result}`);
+    const number2 = getRandonInteger(1, number1);
+    const numberGCD = getNumberGCD(number1, number2);
+    correctAnswers.push(`${numberGCD}`);
     gameQuestions.push(`Question: ${number1} ${number2}`);
   }
-  playGame(gameTask, gameQuestions, results);
+  playGame(gameTask, gameQuestions, correctAnswers);
 }

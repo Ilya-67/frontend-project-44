@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import isNumberPrime from '../src/games/prime.js';
+import playPrimeGame from '../src/games/prime.js';
 
-const qtyRound = 3;
-isNumberPrime(qtyRound);
+playPrimeGame();
