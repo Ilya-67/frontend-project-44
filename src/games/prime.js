@@ -7,7 +7,7 @@ function isNumberPrime(number) {
     if (a === 0 && j < number) {
       result = 'no';
       break;
-    } if (a === 0 && j === number) {
+    } if (j === number) {
       result = 'yes';
     }
   }
