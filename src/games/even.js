@@ -1,9 +1,11 @@
 import playGame, { getQuantityRound } from '../index.js';
 
 function isNumberEven(number) {
+  let result;
   if (number % 2 === 0) {
-    return true;
+    result = true;
   }
+  return result;
 }
 
 export default function playEvenGame() {
