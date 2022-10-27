@@ -20,6 +20,8 @@ Let's try again, ${userName}!`);
     } if (correctAnswers[i] === userAnswer) {
       console.log('Correct!');
     }
-    console.log(`Congratulations, ${userName}!`);
+    if (i === 2) {
+      console.log(`Congratulations, ${userName}!`);
+    }
   }
 }

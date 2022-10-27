@@ -1,6 +1,12 @@
 import playGame, { getQuantityRound } from '../index.js';
 
-const isNumberEven = (number) => (number % 2 === 0) ? true : false;
+function isNumberEven(number) {
+  if (number % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 export default function playEvenGame() {
   const quantityRound = getQuantityRound();
@@ -10,7 +16,7 @@ export default function playEvenGame() {
   let result;
   for (let i = 1; i <= quantityRound; i += 1) {
     const numberForQuestion = Math.trunc([Math.random() * 100]);
-    if (isNumberEven(numberForQuestion) === true) {
+    if (isNumberEven(numberForQuestion) == true) {
       result = 'yes';
     } else {
       result = 'no';

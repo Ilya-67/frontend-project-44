@@ -4,10 +4,11 @@ import getRandonInteger from '../utils.js';
 const getNumberGCD = (number1, number2) => {
   for (let i = number1 + 1; i > 0; i -= 1) {
     if (number1 % i === 0 && number2 % i === 0) {
-        return i;
+      const gcd = i;
+      return gcd;
     }
   }
-}
+};
 
 export default function playGcdGame() {
   const quantityRound = getQuantityRound();

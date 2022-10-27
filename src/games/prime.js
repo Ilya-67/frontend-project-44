@@ -12,7 +12,7 @@ const isNumberPrime = (number) => {
     }
   }
   return result;
-}
+};
 
 export default function playPrimeGame() {
   const quantityRound = getQuantityRound();

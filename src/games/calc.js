@@ -12,7 +12,7 @@ const getResultOfExpession = (number1, number2, operator) => {
     default:
       throw new Error(`Unknown operator: '${operator}'!`);
   }
-}
+};
 
 export default function playCalcGame() {
   const quantityRound = getQuantityRound();
