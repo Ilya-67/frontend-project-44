@@ -1,21 +1,12 @@
 import playGame, { getQuantityRound } from '../index.js';
 import getRandonInteger from '../utils.js';
 
-function getNumberGCD(max, min) {
-  let maxNumber = max;
-  let minNumber = min;
-  let result;
-  while (minNumber > 0) {
-    const divisiorRemainder = maxNumber % minNumber;
-    if (divisiorRemainder === 0) {
-      result = minNumber;
-      break;
-    } else {
-      maxNumber = minNumber;
-      minNumber = divisiorRemainder;
+const getNumberGCD = (number1, number2) => {
+  for (let i = number1 + 1; i > 0; i -= 1) {
+    if (number1 % i === 0 && number2 % i === 0) {
+        return i;
     }
   }
-  return result;
 }
 
 export default function playGcdGame() {
@@ -24,8 +15,8 @@ export default function playGcdGame() {
   const gameQuestions = [];
   const correctAnswers = [];
   for (let i = 1; i <= quantityRound; i += 1) {
-    const number1 = getRandonInteger(1, 1000);
-    const number2 = getRandonInteger(1, number1);
+    const number1 = getRandonInteger(0, 1000);
+    const number2 = getRandonInteger(0, 1000);
     const numberGCD = getNumberGCD(number1, number2);
     correctAnswers.push(`${numberGCD}`);
     gameQuestions.push(`Question: ${number1} ${number2}`);

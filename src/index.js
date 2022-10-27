@@ -10,18 +10,16 @@ export default function playGame(gameTask, gameQuestions, correctAnswers) {
   const userName = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${userName}!`);
   console.log(gameTask);
-  let message;
   for (let i = 0; i < correctAnswers.length; i += 1) {
     console.log(gameQuestions[i]);
     const userAnswer = readlineSync.question('Your answer: ');
     if (correctAnswers[i] !== userAnswer) {
-      message = `"${userAnswer}" is wrong answer ;(. Correct answer  was "${correctAnswers[i]}". 
-Let's try again, ${userName}!`;
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer  was "${correctAnswers[i]}". 
+Let's try again, ${userName}!`);
       break;
     } if (correctAnswers[i] === userAnswer) {
       console.log('Correct!');
     }
-    message = `Congratulations, ${userName}!`;
+    console.log(`Congratulations, ${userName}!`);
   }
-  console.log(message);
 }

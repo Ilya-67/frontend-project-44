@@ -1,13 +1,13 @@
 import playGame, { getQuantityRound } from '../index.js';
 
-function isNumberPrime(number) {
+const isNumberPrime = (number) => {
   let result;
-  for (let j = 2; j <= number; j += 1) {
-    const a = number % j;
-    if (a === 0 && j < number) {
+  for (let i = 2; i <= number; i += 1) {
+    const a = number % i;
+    if (a === 0 && i < number) {
       result = 'no';
       break;
-    } if (j === number) {
+    } if (i === number) {
       result = 'yes';
     }
   }
