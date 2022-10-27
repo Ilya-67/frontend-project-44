@@ -17,7 +17,7 @@ export default function playGame(gameTask, gameQuestions, correctAnswers) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer  was "${correctAnswers[i]}". 
 Let's try again, ${userName}!`);
       break;
-    } if (correctAnswers[i] === userAnswer) {
+    } else {
       console.log('Correct!');
     }
     if (i === 2) {
