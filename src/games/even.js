@@ -2,7 +2,7 @@ import playGame, { getQuantityRound } from '../index.js';
 
 const isNumberEven = (number) => {
   const result = number % 2;
-  return result === 0; 
+  return result === 0;
 };
 
 export default function playEvenGame() {
