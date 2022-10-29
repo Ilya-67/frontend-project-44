@@ -1,7 +1,8 @@
 import playGame, { getQuantityRound } from '../index.js';
 
 const isNumberEven = (number) => {
-  return ((number % 2 === 0) ? true : false);
+  const result = number % 2;
+  return ((result === 0) ? true : false);
 }
 
 export default function playEvenGame() {
