@@ -1,9 +1,9 @@
 import playGame, { getQuantityRound } from '../index.js';
 import getRandonInteger from '../utils.js';
 
-const getProgression = (firstItem, stepProgression) => {
+const getProgression = (firstItem, stepProgression, minItemProgression, maxItemProgression) => {
   const progression = [];
-  const itemInProgession = getRandonInteger(5, 10);
+  const itemInProgession = getRandonInteger(minItemProgression, maxItemProgression);
   for (let i = 0; i < itemInProgession; i += 1) {
     progression.push((i + 1) * firstItem * stepProgression);
   }
@@ -13,12 +13,14 @@ const getProgression = (firstItem, stepProgression) => {
 export default function playProgressionGame() {
   const quantityRound = getQuantityRound();
   const gameTask = 'What number is missing in the progression?';
+  const minItemProgression = 5;
+  const maxItemProgression = 10;
   const gameQuestions = [];
   const correctAnswers = [];
   for (let i = 1; i <= quantityRound; i += 1) {
     const firstItem = getRandonInteger(1, 5);
     const stepProgression = getRandonInteger(2, 10);
-    const gameQuestion = getProgression(firstItem, stepProgression);
+    const gameQuestion = getProgression(firstItem, stepProgression, minItemProgression, maxItemProgression);
     const itemOfHiddenNumber = getRandonInteger(0, (gameQuestion.length - 1));
     const hiddenNumber = gameQuestion[itemOfHiddenNumber];
     gameQuestion[itemOfHiddenNumber] = '..';

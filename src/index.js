@@ -20,8 +20,6 @@ Let's try again, ${userName}!`);
     } else {
       console.log('Correct!');
     }
-    if (i === 2) {
-      console.log(`Congratulations, ${userName}!`);
-    }
   }
+  console.log(`Congratulations, ${userName}!`);
 }
