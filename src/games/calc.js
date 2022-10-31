@@ -14,20 +14,25 @@ const getResultOfExpession = (number1, number2, operator) => {
   }
 };
 
-export default function playCalcGame() {
+const playCalcGame = () => {
   const quantityRound = getQuantityRound();
-  const gameTask = 'What is the result of the expression?';
+  const gameDescription = 'What is the result of the expression?';
+  const minLimitedNumber = 1;
+  const maxLimitedNumber = 100;
+  const firstItemOperation = 0;
   const operators = ['+', '-', '*'];
   const gameQuestions = [];
   const correctAnswers = [];
   for (let i = 1; i <= quantityRound; i += 1) {
-    const number1 = getRandonInteger(1, 100);
-    const number2 = getRandonInteger(1, 100);
-    const itemOperator = `${getRandonInteger(0, 2)}`;
+    const number1 = getRandonInteger(maxLimitedNumber, maxLimitedNumber);
+    const number2 = getRandonInteger(minLimitedNumber, maxLimitedNumber);
+    const itemOperator = `${getRandonInteger(firstItemOperation, (operators.length - 1))}`;
     const roundResult = getResultOfExpession(number1, number2, operators[itemOperator]);
     const roundQuestion = `${number1} ${operators[itemOperator]} ${number2}`;
     correctAnswers.push(`${roundResult}`);
-    gameQuestions.push(`Question: ${roundQuestion}`);
+    gameQuestions.push(`${roundQuestion}`);
   }
-  playGame(gameTask, gameQuestions, correctAnswers);
-}
+  playGame(gameDescription, gameQuestions, correctAnswers);
+};
+
+export default playCalcGame;

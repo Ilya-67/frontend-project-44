@@ -5,16 +5,19 @@ const isNumberEven = (number) => {
   return result === 0;
 };
 
-export default function playEvenGame() {
+const playEvenGame = () => {
   const quantityRound = getQuantityRound();
-  const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const correctionNumber = 100;
   const gameQuestions = [];
   const correctAnswers = [];
   for (let i = 1; i <= quantityRound; i += 1) {
-    const numberForQuestion = Math.trunc([Math.random() * 100]);
+    const numberForQuestion = Math.trunc([Math.random() * correctionNumber]);
     const result = isNumberEven(numberForQuestion) ? 'yes' : 'no';
     correctAnswers.push(result);
-    gameQuestions.push(`Question: ${numberForQuestion}`);
+    gameQuestions.push(numberForQuestion);
   }
-  playGame(gameTask, gameQuestions, correctAnswers);
-}
+  playGame(gameDescription, gameQuestions, correctAnswers);
+};
+
+export default playEvenGame;

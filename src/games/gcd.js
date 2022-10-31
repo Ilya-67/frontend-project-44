@@ -12,17 +12,21 @@ const getNumberGCD = (number1, number2) => {
   return gcd;
 };
 
-export default function playGcdGame() {
+const playGcdGame = () => {
   const quantityRound = getQuantityRound();
-  const gameTask = 'Find the greatest common divisor of given numbers.';
+  const gameDescription = 'Find the greatest common divisor of given numbers.';
+  const minLimitedNumber = 0;
+  const maxLimitedNumber = 100;
   const gameQuestions = [];
   const correctAnswers = [];
   for (let i = 1; i <= quantityRound; i += 1) {
-    const number1 = getRandonInteger(0, 1000);
-    const number2 = getRandonInteger(0, 1000);
+    const number1 = getRandonInteger(minLimitedNumber, maxLimitedNumber);
+    const number2 = getRandonInteger(minLimitedNumber, maxLimitedNumber);
     const numberGCD = getNumberGCD(number1, number2);
     correctAnswers.push(`${numberGCD}`);
-    gameQuestions.push(`Question: ${number1} ${number2}`);
+    gameQuestions.push(`${number1} ${number2}`);
   }
-  playGame(gameTask, gameQuestions, correctAnswers);
-}
+  playGame(gameDescription, gameQuestions, correctAnswers);
+};
+
+export default playGcdGame;
