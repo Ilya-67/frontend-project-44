@@ -22,7 +22,7 @@ const playPrimeGame = () => {
   const correctAnswers = [];
   for (let i = 1; i <= quantityRound; i += 1) {
     const numberForQuestion = Math.trunc([Math.random() * correctionNumber]) + 2;
-    const result = isNumberPrime(numberForQuestion)? 'yes' : 'no';
+    const result = isNumberPrime(numberForQuestion) ? 'yes' : 'no';
     correctAnswers.push(result);
     gameQuestions.push(numberForQuestion);
   }
