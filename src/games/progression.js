@@ -16,14 +16,14 @@ const playProgressionGame = () => {
   const upperStepLimit = 10;
   const minValueFirstItem = 1;
   const maxValueFirstItem = 5;
-  const minQuantityItem = 5;
-  const maxQuantityItem = 10;
+  const minItemsCount = 5;
+  const maxItemsCount = 10;
   const gameQuestions = [];
   const correctAnswers = [];
   for (let i = 1; i <= roundsCount; i += 1) {
     const firstItem = getRandonInteger(minValueFirstItem, maxValueFirstItem);
     const step = getRandonInteger(lowerStepLimit, upperStepLimit);
-    const itemInProgession = getRandonInteger(minQuantityItem, maxQuantityItem);
+    const itemInProgession = getRandonInteger(minItemsCount, maxItemsCount);
     const gameQuestion = getProgression(firstItem, step, itemInProgession);
     const itemOfHiddenNumber = getRandonInteger(0, (gameQuestion.length - 1));
     const hiddenNumber = gameQuestion[itemOfHiddenNumber];
