@@ -15,7 +15,7 @@ const playProgressionGame = () => {
   const lowerStepLimit = 2;
   const upperStepLimit = 10;
   const minValueFirstItem = 1;
-  const maxValueFirstItem = 5;  
+  const maxValueFirstItem = 5;
   const minQuantityItem = 5;
   const maxQuantityItem = 10;
   const gameQuestions = [];

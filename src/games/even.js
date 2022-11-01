@@ -1,9 +1,7 @@
 import playGame, { setRoundsCount } from '../index.js';
 import getRandonInteger from '../utils.js';
 
-const isNumberEven = (number) => {
-  return number % 2 === 0;
-};
+const isNumberEven = (number) => number % 2 === 0;
 
 const playEvenGame = () => {
   const roundsCount = setRoundsCount();
