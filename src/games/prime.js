@@ -1,4 +1,5 @@
-import playGame, { getQuantityRound } from '../index.js';
+import playGame, { setRoundsCount } from '../index.js';
+import getRandonInteger from '../utils.js';
 
 const isNumberPrime = (number) => {
   let result;
@@ -15,13 +16,13 @@ const isNumberPrime = (number) => {
 };
 
 const playPrimeGame = () => {
-  const quantityRound = getQuantityRound();
+  const roundsCount = setRoundsCount();
   const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const correctionNumber = 100;
+  const minNumber = 2;
   const gameQuestions = [];
   const correctAnswers = [];
-  for (let i = 1; i <= quantityRound; i += 1) {
-    const numberForQuestion = Math.trunc([Math.random() * correctionNumber]) + 2;
+  for (let i = 1; i <= roundsCount; i += 1) {
+    const numberForQuestion = getRandonInteger(minNumber, );
     const result = isNumberPrime(numberForQuestion) ? 'yes' : 'no';
     correctAnswers.push(result);
     gameQuestions.push(numberForQuestion);

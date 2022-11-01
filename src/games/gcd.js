@@ -1,4 +1,4 @@
-import playGame, { getQuantityRound } from '../index.js';
+import playGame, { setRoundsCount } from '../index.js';
 import getRandonInteger from '../utils.js';
 
 const getNumberGCD = (number1, number2) => {
@@ -13,15 +13,13 @@ const getNumberGCD = (number1, number2) => {
 };
 
 const playGcdGame = () => {
-  const quantityRound = getQuantityRound();
+  const roundsCount = setRoundsCount();
   const gameDescription = 'Find the greatest common divisor of given numbers.';
-  const minLimitedNumber = 0;
-  const maxLimitedNumber = 100;
   const gameQuestions = [];
   const correctAnswers = [];
-  for (let i = 1; i <= quantityRound; i += 1) {
-    const number1 = getRandonInteger(minLimitedNumber, maxLimitedNumber);
-    const number2 = getRandonInteger(minLimitedNumber, maxLimitedNumber);
+  for (let i = 1; i <= roundsCount; i += 1) {
+    const number1 = getRandonInteger();
+    const number2 = getRandonInteger();
     const numberGCD = getNumberGCD(number1, number2);
     correctAnswers.push(`${numberGCD}`);
     gameQuestions.push(`${number1} ${number2}`);

@@ -2,7 +2,11 @@
 <a href="https://github.com/Ilya-67/frontend-project-44/workflows/hexlet-check/badge.svg"><img src="https://github.com/Ilya-67/frontend-project-44/workflows/hexlet-check/badge.svg" /></a>
 <a href="https://codeclimate.com/github/Ilya-67/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/f2e708b6a1a110b3d43b/maintainability" /></a>
 
-<h2>Project "Brain games" contain 5 games:</h2>
+<h2>Project "Brain games"</h2>
+<p>The "Bryan Games" project was created as part of training in JS script programming after completing the first stage of Hexlet courses. The goal of the project is to test the student's ability to use simple JS tools for writing code, the student's understanding of the basics of code quality, its functionality and maintainability. As well as the student's ability to interact with the external environment of the GIT.
+Within the framework of the project, five independent games were developed, based on the work of mathematical algorithms and having a common logical part placed in a separate index.js file.
+The Bin directory contains executable files for running games. The crc/games directory contains game files, the part of the code that contains the logic of a particular game.
+Below are descriptions of games and examples of their code execution.</p>
 <ul>
     <li>
         <h3>Brain-even</h3>
